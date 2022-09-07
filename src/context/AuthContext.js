@@ -3,11 +3,11 @@ import { auth } from '../firebase-config'
 
 const AuthContext=React.createContext()
 
-/*
 
-console.log(auth.createUserWithEmailAndPassword("sam@gmail","1234"))
 
-*/
+console.log(auth.CreateUserWithEmailAndPassword("sam@gmail","1234"))
+
+
 export function useAuth(){
     return useContext(AuthContext)
 }
