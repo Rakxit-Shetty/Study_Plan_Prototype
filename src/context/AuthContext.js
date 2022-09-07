@@ -3,10 +3,10 @@ import { auth } from '../App'
 import { createUserWithEmailAndPassword } from "firebase/auth";
 const AuthContext=React.createContext()
 
-
+/*
 
 console.log(auth.CreateUserWithEmailAndPassword("sam@gmail","1234"))
-
+*/
 
 export function useAuth(){
     return useContext(AuthContext)
