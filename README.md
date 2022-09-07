@@ -1,5 +1,5 @@
 Auth failed 
-![Screenshot](screenshot.png)
+![Screenshot](screenshot (6).png)
 
 # Getting Started with Create React App
 
