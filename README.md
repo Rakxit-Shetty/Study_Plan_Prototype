@@ -1,5 +1,5 @@
 Auth failed 
-![Screenshot](https://github.com/Rakxit-Shetty/firebase-Auth/edit/add_title/Screenshot (6).png) 
+![Screenshot](https://github.com/Rakxit-Shetty/firebase-Auth/edit/add_title/Screenshow.png) 
 
 # Getting Started with Create React App
 
