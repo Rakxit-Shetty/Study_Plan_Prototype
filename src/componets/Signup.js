@@ -23,9 +23,11 @@ export default function Signup() {
     try{
       setError("")
       setLoading(true)
-      await signup(emailRef.current.value, passwordRef.current.value)
+      let data = await signup(emailRef.current.value, passwordRef.current.value)
      
-    }catch{
+      console.log(data)
+    }catch(err){
+        console.log(err)
       setError("Failed to create an account")
      //console.log()
       
