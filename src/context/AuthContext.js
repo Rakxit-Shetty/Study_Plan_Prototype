@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react'
-import { auth } from '../firebase-config'
-
+import { auth } from '../App'
+import { createUserWithEmailAndPassword } from "firebase/auth";
 const AuthContext=React.createContext()
 
 /*
@@ -18,11 +18,14 @@ export function AuthProvider({children}) {
     function signup(email, password) {
 
       //see Error CreateUserWithEmailAndPassword  
-      console.log(auth)
-      console.log("test inside signup")
-        return auth.createUserWithEmailAndPassword(email,password)
-      
-      }
+      console.log(auth) 
+        // return auth.createUserWithEmailAndPassword(email,password)
+
+        console.log("ISIDE")
+
+        return createUserWithEmailAndPassword(auth, email, password)
+
+    }
 
       
 
