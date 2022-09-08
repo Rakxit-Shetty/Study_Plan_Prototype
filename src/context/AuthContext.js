@@ -1,10 +1,9 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { auth } from '../App'
-import { createUserWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword,signInWithEmailAndPassword } from "firebase/auth";
 const AuthContext=React.createContext()
 
 /*
-
 console.log(auth.CreateUserWithEmailAndPassword("sam@gmail","1234"))
 */
 
@@ -16,18 +15,15 @@ export function AuthProvider({children}) {
     const [currentUser,setCurrentUser]=useState()
 
     function signup(email, password) {
-
-      //see Error CreateUserWithEmailAndPassword  
       console.log(auth) 
-        // return auth.createUserWithEmailAndPassword(email,password)
-
         console.log("ISIDE")
-
         return createUserWithEmailAndPassword(auth, email, password)
-
     }
 
-      
+    function login(email, password) {
+      console.log("inside log")
+      return signInWithEmailAndPassword(auth,email, password)
+    }
 
     useEffect(() => {
         const unsubscribe = auth.onAuthStateChanged(user => {
@@ -40,7 +36,8 @@ export function AuthProvider({children}) {
 
     const value ={
         currentUser,
-        signup
+        signup,
+        login
     }
 
   return (

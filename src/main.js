@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
-import "./App.css";
-import { db } from "./firebase-config";
+//import { db } from "./App";
 import {
   collection,
   getDocs,
@@ -9,6 +8,7 @@ import {
   deleteDoc,
   doc,
 } from "firebase/firestore";
+import { db } from "./App";
 
 function App() {
   const [newName, setNewName] = useState("");
