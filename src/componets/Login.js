@@ -54,9 +54,22 @@ export default function Login() {
           </Form>
           <div className="w-100 text-center mt-2">
             Don't have an account? <Link to="/signup">Sign up</Link>
+
           </div>
         </Card.Body>
       </Card>
+
+      <footer class="text-center text-white fixed-bottom" style="background-color: #21081a;">
+
+  <div class="container p-4"></div>
+
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    © 2022 Copyright:
+    <a class="text-white" href="https://rakshitshetty.netlify.app">Rakshith shetty</a>
+  </div>  
+<div>Objective : Software Engineer Intern Assignment - StrategyCo.Global</div>
+</footer>
+
       </div>
     </>
   );
