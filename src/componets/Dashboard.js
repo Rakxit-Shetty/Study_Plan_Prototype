@@ -13,7 +13,8 @@ export default function Dashboard() {
     try {
       await logout();
       navigate("/login");
-    } catch {
+    } catch(err) {
+        console.log(err)
       //setError("Failed to log out")
     }
   }
@@ -23,15 +24,17 @@ export default function Dashboard() {
       <Card>
         <Card.Body>
           <h2 className="text-center mb-4">
-            Dashbord of <br></br>
+            Welcome <br></br>
             {currentUser.email}
           </h2>
         </Card.Body>
         <div className="w-100 text-center mt-2">
-          <Button variant="link">
+            <div>Go to </div>
+          <Button variant="link" >
             <Link to="/study">Study Plan </Link>
           </Button>
           <br></br>
+          <div>or</div>
           <Button variant="link" onClick={handleLogout}>
             Log Out
           </Button>

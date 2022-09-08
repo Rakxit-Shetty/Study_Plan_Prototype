@@ -3,6 +3,7 @@ import { auth } from "../App";
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
+  signOut
 } from "firebase/auth";
 const AuthContext = React.createContext();
 
@@ -17,6 +18,10 @@ export function AuthProvider({ children }) {
     console.log(auth);
     console.log("ISIDE");
     return createUserWithEmailAndPassword(auth, email, password);
+  }
+
+ function logout(){
+    return signOut(auth);
   }
 
   function login(email, password) {
@@ -36,6 +41,7 @@ export function AuthProvider({ children }) {
     currentUser,
     signup,
     login,
+    logout
   };
 
   return (

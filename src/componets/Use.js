@@ -35,7 +35,7 @@ export default function Use() {
   }
 
   const [users, setUsers] = useState([]);
-  const usersCollectionRef = collection(db, "users");
+  const usersCollectionRef = collection(db, "study");
 
 
 
@@ -53,7 +53,7 @@ export default function Use() {
 
   const updateUser = async (id, count, limit) => {
     if (count < limit) {
-      const userDoc = doc(db, "users", id);
+      const userDoc = doc(db, "study", id);
       const newFields = { count: count + 1 };
       await updateDoc(userDoc, newFields);
       window.location.reload(true);
@@ -63,7 +63,7 @@ export default function Use() {
   };
 
   const deleteUser = async (id) => {
-    const userDoc = doc(db, "users", id);
+    const userDoc = doc(db, "study", id);
     await deleteDoc(userDoc);
     window.location.reload(true);
   };
@@ -183,26 +183,28 @@ export default function Use() {
           return (
             <div>
               <div>
+                <div className=" bg-light text-dark text-left border rounded mb-1 px-2">
                 {" "}
-                <h1>
-                  Title:{"              "} {user.name}
-                </h1>
-                <h1>
-                  Student limit:{"      "} {user.limit}
-                </h1>
-                <h1>
-                  Student Enroled:{"    "}
+                <h2>
+                  Title: {"              "} {user.name}
+                </h2>
+                <h2>
+                  Student limit: {"      "} {user.limit}
+                </h2>
+                <h2>
+                  Student Enroled: {"    "}
                   {user.count}
-                </h1>
-                <h1>
-                  Subject:{"            "} {user.subject}
-                </h1>
-                <h1>
-                  Start Date:{"         "} {user.Start_date}
-                </h1>
-                <h1>
-                  End Date:{"           "} {user.End_date}
-                </h1>
+                </h2>
+                <h2>
+                  Subject: {"            "} {user.subject}
+                </h2>
+                <h2>
+                  Start Date: {"         "} {user.Start_date}
+                </h2>
+                <h2>
+                  End Date: {"           "} {user.End_date}
+                </h2>
+                </div>
                 <Button
                   text="submit"
                   className="w-100"
@@ -223,6 +225,7 @@ export default function Use() {
                   {" "}
                   Delete Session
                 </Button>
+                <div className="mb-2"></div>
               </div>
             </div>
           );

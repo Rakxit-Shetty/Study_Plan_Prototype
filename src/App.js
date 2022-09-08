@@ -10,6 +10,8 @@ import Signup from "./componets/Signup";
 import Login from "./componets/Login";
 import Dashboard from "./componets/Dashboard";
 import Use from "./componets/Use";
+
+
 const firebaseConfig = {
   apiKey: "AIzaSyADUaTNwEkUQysTFefKxP7qjemKpukSFMI",
   authDomain: "study-plan-9b81f.firebaseapp.com",
@@ -26,6 +28,7 @@ export const db = firebaseApp.firestore();
 function App() {
   return (
     <>
+    <div className="bg-dark">
       <Container
         className="d-flex align-items-center justify-content-center"
         style={{ minHeight: "100vh" }}
@@ -42,7 +45,7 @@ function App() {
         </Router>
       </Container>
 
-      
+      </div>
     </>
   );
 }
