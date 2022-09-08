@@ -85,7 +85,7 @@ export default function Use() {
           <Card>
          
             <Card.Body>
-              <h2 className="text-center mb-3">Create study group</h2>
+              <h2 className="text-center mb-3">Create Study Session</h2>
               <Form>
                 <Form.Group id="text">
                   <Form.Label>Title</Form.Label>
@@ -166,7 +166,7 @@ export default function Use() {
 
                 <br></br>
                 <Button text="submit" className="w-100" onClick={createUser}>
-                  Create Group study plan
+                  Create session study plan
                 </Button>
               </Form>
             </Card.Body>

@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Form, Card, Button, Alert } from "react-bootstrap";
+import { Form, Card, Button, Alert, Navbar, Container } from "react-bootstrap";
 import { useAuth } from "../context/AuthContext";
 import { Link, useNavigate } from "react-router-dom";
 
@@ -36,7 +36,7 @@ export default function Login() {
     <div className="bg-dark">
       <Card>
         <Card.Body>
-          <h2 className="text-center mb-3">log in</h2>
+          <h2 className="text-center mb-3">Sign in</h2>
           {error && <Alert variant="danger">{error}</Alert>}
           <Form onSubmit={handleSubmit}>
             <Form.Group id="email">
@@ -59,18 +59,11 @@ export default function Login() {
         </Card.Body>
       </Card>
 
-      <footer class="text-center text-white fixed-bottom" style="background-color: #21081a;">
-
-  <div class="container p-4"></div>
-
-  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-    © 2022 Copyright:
-    <a class="text-white" href="https://rakshitshetty.netlify.app">Rakshith shetty</a>
-  </div>  
-<div>Objective : Software Engineer Intern Assignment - StrategyCo.Global</div>
-</footer>
-
+     
+      
       </div>
+      
+
     </>
   );
 }
