@@ -6,6 +6,10 @@ Study planer is a web application made with **React JS** framework that lets stu
 ## Backend
 For the backend it uses Firebase FireStore for data capturing and Firebase Authentication for Email password Authentication.
 
+## Deployment 
+
+https://study-plan-prototype-umber.vercel.app/login
+
 ## ⭐ Features
 
 - Authentication.
