@@ -1,4 +1,4 @@
-# Study planner inc - Made With React JS  #
+# Study planner inc -
 For Software Engineer Intern Assignment - StrategyCo.Global
 
 Study planer is a web application made with **React JS** framework that lets students plan group study sessions with other students.
